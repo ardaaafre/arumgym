@@ -10,7 +10,7 @@ $sorgu_hareketler = mysqli_query($conn,"select * from hareketler");
 v            <di class="col-12 text-center">
                 <h1 class="display-2 text-uppercase text-white mb-md-4">Blog Grid</h1>
                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Blog</a>
+                <a href="" class="btn btn-light py-md-3 px-md-5">Blog </a>
             </di>
         </div>
     </div>
