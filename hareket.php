@@ -35,7 +35,7 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                 <!-- Blog Detail End -->
 
                 <!-- Comment List Start -->
-                <div class="mb-5">
+                <!-- <div class="mb-5">
                     <h3 class="text-uppercase mb-4">3 Comments</h3>
                     <div class="d-flex mb-4">
                         <img src="img/user.jpg" class="img-fluid rounded" style="width: 45px; height: 45px;">
@@ -64,11 +64,11 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                             <button class="btn btn-sm btn-secondary">Reply</button>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Comment List End -->
 
                 <!-- Comment Form Start -->
-                <div class="bg-dark rounded p-5">
+                <!-- <div class="bg-dark rounded p-5">
                     <h3 class="text-light text-uppercase mb-4">Leave a comment</h3>
                     <form>
                         <div class="row g-3">
@@ -89,36 +89,27 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> -->
                 <!-- Comment Form End -->
             </div>
 
             <!-- Sidebar Start -->
             <div class="col-lg-4">
                 <!-- Search Form Start -->
-                <div class="mb-5">
+                <!-- <div class="mb-5">
                     <div class="input-group">
                         <input type="text" class="form-control p-3" placeholder="Keyword">
                         <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
-                </div>
+                </div> -->
                 <!-- Search Form End -->
 
                 <!-- Category Start -->
-                <div class="mb-5">
-                    <h3 class="text-uppercase mb-4">Categories</h3>
-                    <div class="d-flex flex-column justify-content-start bg-dark rounded p-4">
-                        <a class="fs-5 fw-bold text-light text-uppercase mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Web Design</a>
-                        <a class="fs-5 fw-bold text-light text-uppercase mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Web Development</a>
-                        <a class="fs-5 fw-bold text-light text-uppercase mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Web Development</a>
-                        <a class="fs-5 fw-bold text-light text-uppercase mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Keyword Research</a>
-                        <a class="fs-5 fw-bold text-light text-uppercase" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Email Marketing</a>
-                    </div>
-                </div>
+                <?php include("components/tüm hareketler.php") ?>  
                 <!-- Category End -->
 
                 <!-- Recent Post Start -->
-                <div class="mb-5">
+                <!-- <div class="mb-5">
                     <h3 class="text-uppercase mb-4">Recent Post</h3>
                     <div class="bg-dark rounded p-4">
                         <div class="d-flex overflow-hidden mb-3">
@@ -147,11 +138,11 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Recent Post End -->
 
                 <!-- Tags Start -->
-                <div class="mb-5">
+                <!-- <div class="mb-5">
                     <h3 class="text-uppercase mb-4">Tag Cloud</h3>
                     <div class="d-flex flex-wrap m-n1">
                         <a href="" class="btn btn-dark m-1">Design</a>
@@ -167,17 +158,11 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                         <a href="" class="btn btn-dark m-1">Writing</a>
                         <a href="" class="btn btn-dark m-1">Consulting</a>
                     </div>
-                </div>
+                </div> -->
                 <!-- Tags End -->
 
                 <!-- Plain Text Start -->
-                <div>
-                    <h3 class="text-uppercase mb-4">Plain Text</h3>
-                    <div class="bg-dark rounded text-center text-light" style="padding: 30px;">
-                        <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor ipsum amet diam</p>
-                        <a href="" class="btn btn-primary py-2 px-4">Read More</a>
-                    </div>
-                </div>
+                <?php include("components/motivasyon sözü.php") ?> 
                 <!-- Plain Text End -->
             </div>
             <!-- Sidebar End -->

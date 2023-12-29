@@ -2,6 +2,7 @@
 include('header.php')
 ?>
 
+
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -125,20 +126,9 @@ include('header.php')
     
 
     <!-- Facts Start -->
-    <div class="container-fluid bg-dark facts p-5 my-5">
-        <div class="row gx-5 gy-4 py-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-star fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Experience</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
+    
+    <?php include("components/artis_kisim.php") ?>      
+            <!-- <div class="col-lg-3 col-md-6">
                 <div class="d-flex">
                     <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                         <i class="fa fa-users fs-4 text-white"></i>
@@ -170,7 +160,7 @@ include('header.php')
                         <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Facts End -->
@@ -242,45 +232,7 @@ include('header.php')
     <!-- Team End -->
     
 
-    <!-- Testimonial Start -->
-    <div class="container-fluid p-0 my-5">
-        <div class="row g-0">
-            <div class="col-lg-6" style="min-height: 500px;">
-                <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100" src="img/testimonial.jpg" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-6 bg-dark p-5">
-                <div class="mb-5">
-                    <h5 class="text-primary text-uppercase">Testimonial</h5>
-                    <h1 class="display-3 text-uppercase text-light mb-0">Our Client Say</h1>
-                </div>
-                <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item">
-                        <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" alt="">
-                            <div class="ps-4">
-                                <h5 class="text-uppercase text-light">Client Name</h5>
-                                <span class="text-uppercase text-secondary">Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <p class="fs-4 fw-normal text-light mb-4"><i class="fa fa-quote-left text-primary me-3"></i>Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat dolor rebum sit ipsum.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" alt="">
-                            <div class="ps-4">
-                                <h5 class="text-uppercase text-light">Client Name</h5>
-                                <span class="text-uppercase text-secondary">Profession</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
+    <?php include("components/yorum.php") ?>  
 
 
     <!-- Blog Start -->

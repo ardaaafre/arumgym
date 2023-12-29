@@ -37,8 +37,8 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                             <a class="text-secondary mb-2" href="hakkımızda.php"><i class="bi bi-arrow-right text-primary me-2"></i>Hakkımızda</a>
                             <a class="text-secondary mb-2" href="sınıflar.php"><i class="bi bi-arrow-right text-primary me-2"></i>Sınıflar</a>
                             <a class="text-secondary mb-2" href="eğitmenler.php"><i class="bi bi-arrow-right text-primary me-2"></i>Eğitmenler</a>
-                            <a class="text-secondary mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                            <a class="text-secondary" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            <a class="text-secondary mb-2" href="hareketler.php"><i class="bi bi-arrow-right text-primary me-2"></i>Hareketler</a>
+                            <a class="text-secondary" href="iletişim.php"><i class="bi bi-arrow-right text-primary me-2"></i>İletişim</a>
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">

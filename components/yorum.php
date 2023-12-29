@@ -1,22 +1,7 @@
 <?php
-include('header.php');
 $sorgu_yrm = mysqli_query($conn,"select * from yorumlar");
 ?>
-
-
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary p-5 bg-hero mb-5">
-        <div class="row py-5">
-            <div class="col-12 text-center">
-                <h1 class="display-2 text-uppercase text-white mb-md-4">Testimonial</h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Testimonial</a>
-            </div>
-        </div>
-    </div>
-    <!-- Hero End -->
-
-
+    
     <!-- Testimonial Start -->
     <div class="container-fluid p-0" style="margin: 90px 0;">
         <div class="row g-0">
@@ -61,9 +46,3 @@ $sorgu_yrm = mysqli_query($conn,"select * from yorumlar");
         </div>
     </div>
     <!-- Testimonial End -->
-    
-
-    <?php
-include('footer.php')
-
-?>
