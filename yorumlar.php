@@ -1,4 +1,5 @@
 <?php
+$isOtherActive = true;
 include('header.php');
 $sorgu_yrm = mysqli_query($conn,"select * from yorumlar");
 ?>

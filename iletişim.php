@@ -1,4 +1,5 @@
 <?php
+$currentPage = "İletişim";
 include('header.php')
 ?>
 
@@ -38,7 +39,7 @@ include('header.php')
                         <i class="fa fa-envelope fs-4 text-white"></i>
                     </div>
                     <h5 class="text-uppercase text-primary">E-posta Adresimiz</h5>
-                    <p class="text-secondary mb-0"><?php echo $genel_bilgiler['email'] ?></p>
+                    <p class="text-secondary mb-0"><?php echo $genel_bilgiler['email'] ?></p> <br>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -47,34 +48,37 @@ include('header.php')
                         <i class="fa fa-phone fs-4 text-white"></i>
                     </div>
                     <h5 class="text-uppercase text-primary">Numara</h5>
-                    <p class="text-secondary mb-0"><?php echo $genel_bilgiler['numara'] ?></p>
+                    <p class="text-secondary mb-0"><?php echo $genel_bilgiler['numara'] ?></p> <br>
                 </div>
             </div>
         </div>
         <div class="row g-0">
-            <!-- <div class="col-lg-6">
+            <div class="col-lg-6">
                 <div class="bg-dark p-5">
                     <form>
                         <div class="row g-3">
                             <div class="col-6">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" required class="form-control bg-light border-0 px-4" placeholder="İsim-Soyisim" style="height: 55px;">
                             </div>
                             <div class="col-6">
-                                <input type="email" class="form-control bg-light border-0 px-4" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" required class="form-control bg-light border-0 px-4" placeholder="E-posta" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control bg-light border-0 px-4" placeholder="Subject" style="height: 55px;">
+                                <input type="text" required class="form-control bg-light border-0 px-4" placeholder="Konu" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Message"></textarea>
+                                <textarea required class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Mesaj"></textarea>
                             </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            <div class="col-6">  
+                            <button class="btn btn-primary w-100 py-3" type="submit">Mesajı Gönder</button>
+                            </div>
+                            <div class="col-6">
+                            <button class="btn btn-primary w-100 py-3" type="reset">Mesajı Sil</button>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div> -->
+            </div> 
             <div class="col-lg">
                 <iframe class="w-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.3755595793077!2d30.479029233111945!3d39.78129488858804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc1686e461c6d3%3A0xf8fe95d738fb71a3!2zR8O8bmTDvHphbHAgR1NCIMOWxJ9yZW5jaSBZdXJkdQ!5e0!3m2!1str!2str!4v1703420489056!5m2!1str!2str"

@@ -9,7 +9,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
         <div class="row gx-5">
             <div class="col-lg-8 col-md-6">
                 <div class="row gx-5">
-                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                    <div class="col-lg-6 col-md-12 pt-5 mb-5">
                         <h4 class="text-uppercase text-light mb-4">İletişime Geçin</h4>
                         <div class="d-flex mb-2">
                             <i class="bi bi-geo-alt text-primary me-2"></i>
@@ -30,7 +30,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                             <a class="btn btn-primary btn-square rounded-circle" href="#"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                    <div class="col-lg-6 col-md-12 pt-0 pt-lg-5 mb-5">
                         <h4 class="text-uppercase text-light mb-4">Hızlı Linkler</h4>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-secondary mb-2" href="index.php"><i class="bi bi-arrow-right text-primary me-2"></i>Anasayfa</a>
@@ -39,6 +39,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                             <a class="text-secondary mb-2" href="eğitmenler.php"><i class="bi bi-arrow-right text-primary me-2"></i>Eğitmenler</a>
                             <a class="text-secondary mb-2" href="hareketler.php"><i class="bi bi-arrow-right text-primary me-2"></i>Hareketler</a>
                             <a class="text-secondary" href="iletişim.php"><i class="bi bi-arrow-right text-primary me-2"></i>İletişim</a>
+                            <a class="text-secondary" href="yorumlar.php"><i class="bi bi-arrow-right text-primary me-2"></i>Yorumlar</a>
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">

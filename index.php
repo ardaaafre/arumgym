@@ -1,5 +1,7 @@
 <?php
+$currentPage = "Anasayfa";
 include('header.php')
+
 ?>
 
 
@@ -85,38 +87,7 @@ include('header.php')
 
 
     <!-- Programe Start -->
-    <div class="container-fluid programe position-relative px-5 mt-5" style="margin-bottom: 135px;">
-        <div class="row g-5 gb-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-six-pack display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Body Building</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-barbell display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Weight Lefting</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="bg-light rounded text-center p-5">
-                    <i class="flaticon-bodybuilding display-1 text-primary"></i>
-                    <h3 class="text-uppercase my-4">Muscle Building</h3>
-                    <p>Sed amet tempor amet sit kasd sea lorem dolor ipsum elitr dolor amet kasd elitr duo vero amet amet stet</p>
-                    <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-6 text-center">
-                <h1 class="text-uppercase text-light mb-4">30% Discount For This Summer</h1>
-                <a href="" class="btn btn-primary py-3 px-5">Become A Member</a>
-            </div>
-        </div>
-    </div>
+    <?php include("components/beyaz_kisim.php") ?> 
     <!-- Programe Start -->
 
 
@@ -169,64 +140,28 @@ include('header.php')
     <!-- Team Start -->
     <div class="container-fluid p-5">
         <div class="mb-5 text-center">
-            <h5 class="text-primary text-uppercase">The Team</h5>
-            <h1 class="display-3 text-uppercase mb-0">Expert Trainers</h1>
+            <h5 class="text-primary text-uppercase">Takım</h5>
+            <h1 class="display-3 text-uppercase mb-0">Uzman Eğitmenler</h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="team-item position-relative">
-                    <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                        <div class="team-overlay">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+            <?php
+                $sorgu_egtm = mysqli_query($conn,"select * from egitmenler order by rand() limit 3");
+                while($egitmen=mysqli_fetch_array($sorgu_egtm))
+                {
+                    echo '<div class="col-lg-4 col-md-6">
+                    <div class="team-item position-relative">
+                        <div class="position-relative overflow-hidden rounded">
+                            <img class="img-fluid w-100" src="img/'.$egitmen['resim'].'" alt="">
+                            
+                        </div>
+                        <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
+                            <h5 class="text-uppercase text-light">'.$egitmen['adi'].' '.$egitmen['soyadi'].'</h5>
+                            <p class="text-uppercase text-secondary m-0">Trainer</p>
                         </div>
                     </div>
-                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
-                        <h5 class="text-uppercase text-light">John Deo</h5>
-                        <p class="text-uppercase text-secondary m-0">Trainer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-item position-relative">
-                    <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                        <div class="team-overlay">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
-                        <h5 class="text-uppercase text-light">James Taylor</h5>
-                        <p class="text-uppercase text-secondary m-0">Trainer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="team-item position-relative">
-                    <div class="position-relative overflow-hidden rounded">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                        <div class="team-overlay">
-                            <div class="d-flex align-items-center justify-content-start">
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-light btn-square rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
-                        <h5 class="text-uppercase text-light">Adam Phillips</h5>
-                        <p class="text-uppercase text-secondary m-0">Trainer</p>
-                    </div>
-                </div>
-            </div>
+                </div>';
+                }
+            ?>
         </div>
     </div>
     <!-- Team End -->
@@ -238,71 +173,43 @@ include('header.php')
     <!-- Blog Start -->
     <div class="container-fluid p-5">
         <div class="mb-5 text-center">
-            <h5 class="text-primary text-uppercase">Our Blog</h5>
-            <h1 class="display-3 text-uppercase mb-0">Latest Blog Post</h1>
+            <h5 class="text-primary text-uppercase">Hareketlerimiz</h5>
+            <h1 class="display-3 text-uppercase mb-0">Son Eklenen Hareketler</h1>
         </div>
         <div class="row g-5">
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
+        <?php
+                $sorgu_hareketler = mysqli_query($conn,"select * from hareketler order by rand() limit 3");
+                while($hareket=mysqli_fetch_array($sorgu_hareketler))
+                {
+                    echo '
+                    <div class="col-md-4">
+                    <a href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">
+                    <div class="blog-item">
+                        <div class="position-relative overflow-hidden rounded-top">
+                            <img class="img-fluid" src="img/'.$hareket['resim'].'" alt="">
                         </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
+                        <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
+                            <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
+                                
+                                <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
+                                
+                            </div>
+                            <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
+                        </div>
                     </div>
+                    </a>
+                </div>
+                ';
+                }
+            ?>
+                    
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
-                        </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="blog-item">
-                    <div class="position-relative overflow-hidden rounded-top">
-                        <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                    </div>
-                    <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                        <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                            <span>01</span>
-                            <h6 class="text-light text-uppercase mb-0">January</h6>
-                            <span>2045</span>
-                        </div>
-                        <a class="h5 text-uppercase text-light" href="">Sed amet tempor amet sit kasd sea lorem</h4></a>
-                    </div>
-                </div>
-            </div>
+           
+           
         </div>
     </div>
     <!-- Blog End -->
-    <?php
-// $_GET süper global değişkeni üzerinden sayfa parametresini al
-$sayfa_param = @$_GET['sayfa'];
-
-// sayfa parametresi var mı kontrol et
-if (isset($sayfa_param)) {
-    echo "Sayfa Parametresi: " . $sayfa_param;
-} else {
-    echo "Sayfa parametresi belirtilmemiş.";
-}
-?>
-
-    
 
    <?php
    include('footer.php')

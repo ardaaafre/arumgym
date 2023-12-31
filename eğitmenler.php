@@ -1,4 +1,5 @@
 <?php
+$currentPage = "Eğitmenler";
 include('header.php');
 $sorgu_egtm = mysqli_query($conn,"select * from egitmenler");
 ?>

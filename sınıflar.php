@@ -1,4 +1,5 @@
 <?php
+$currentPage = "Sınıflar";
 include('header.php')
 ?>
 <!-- <?php

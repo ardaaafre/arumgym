@@ -39,7 +39,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
     <div class="container-fluid bg-dark px-0">
         <div class="row gx-0">
             <div class="col-lg-3 bg-dark d-none d-lg-block">
-                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                <a href="index.php" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                     <h1 class="m-0 display-4 text-primary text-uppercase"><?php echo $genel_bilgiler['site_adi'] ?></h1>
                 </a>
             </div>
@@ -84,19 +84,20 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.php" class="nav-item nav-link ">Anasayfa</a>
-                            <a href="hakkımızda.php" class="nav-item nav-link">Hakkımızda</a>
-                            <a href="sınıflar.php" class="nav-item nav-link">Sınıflar</a>
-                            <a href="eğitmenler.php" class="nav-item nav-link">Eğitmenler</a>
-                            <div class="nav-item dropdown">
+                            <a href="index.php" class="nav-item nav-link <?php echo ($currentPage == "Anasayfa") ? 'active' : ''; ?>">Anasayfa</a>
+                            <a href="hakkımızda.php" class="nav-item nav-link <?php echo ($currentPage == "Hakkımızda") ? 'active' : ''; ?>">Hakkımızda</a>
+                            <a href="sınıflar.php" class="nav-item nav-link <?php echo ($currentPage == "Sınıflar") ? 'active' : ''; ?>">Sınıflar</a>
+                            <a href="eğitmenler.php" class="nav-item nav-link <?php echo ($currentPage == "Eğitmenler") ? 'active' : ''; ?>">Eğitmenler</a>
+                            <div class="nav-item dropdown <?php echo ($isOtherActive) ? 'active' : ''; ?>">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Diğer</a>
                                 <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="hareketler.php" class="dropdown-item">Hareketler</a>
-                                    <a href="hareket.php" class="dropdown-item">Hareket</a>
-                                    <a href="yorumlar.php" class="dropdown-item">Yorumlar</a>
-                                </div>
-                            </div>
-                            <a href="iletişim.php" class="nav-item nav-link">İletişim</a>
+        <a href="hareketler.php" class="dropdown-item ">Hareketler</a>
+        <a href="yorumlar.php" class="dropdown-item ">Yorumlar</a>
+    </div>
+</div>
+
+
+                            <a href="iletişim.php" class="nav-item nav-link <?php echo ($currentPage == "İletişim") ? 'active' : ''; ?>">İletişim</a>
                         </div>
                         
                     </div>
