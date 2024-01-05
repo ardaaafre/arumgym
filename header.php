@@ -32,6 +32,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>

@@ -16,37 +16,36 @@ v            <di class="col-12 text-center">
         </div>
     </div>
     <!-- Hero End -->
-
-
     <!-- Blog Start -->
     <div class="container-fluid p-5">
         <div class="row g-5">
             <!-- Blog list Start -->
             <div class="col-lg-8">
-                <div class="row g-5">
+                <div class="row g-5 " id="sonuc">
+                
                 <?php
-                while($hareket=mysqli_fetch_array($sorgu_hareketler))
-                {
-                    echo '
-                    <div class="col-md-6">
-                    <a href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">
-                    <div class="blog-item">
-                        <div class="position-relative overflow-hidden rounded-top">
-                            <img class="img-fluid" src="img/'.$hareket['resim'].'" alt="">
-                        </div>
-                        <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                            <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
+                // while($hareket=mysqli_fetch_array($sorgu_hareketler))
+                // {
+                //     echo '
+                //     <div class="col-md-6">
+                //     <a href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">
+                //     <div class="blog-item">
+                //         <div class="position-relative overflow-hidden rounded-top">
+                //             <img class="img-fluid" src="img/'.$hareket['resim'].'" alt="">
+                //         </div>
+                //         <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
+                //             <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
                                 
-                                <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
+                //                 <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
                                 
-                            </div>
-                            <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                ';
-                }
+                //             </div>
+                //             <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
+                //         </div>
+                //     </div>
+                //     </a>
+                // </div>
+                // ';
+                // }
             ?>
                     
                 </div>
@@ -55,71 +54,15 @@ v            <di class="col-12 text-center">
 
             <!-- Sidebar Start -->
             <div class="col-lg-4">
-                <!-- Search Form Start -->
-                <!-- <div class="mb-5">
-                    <div class="input-group">
-                        <input type="text" class="form-control p-3" placeholder="Keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div> -->
-                <!-- Search Form End -->
+              
 
                 <!-- Category Start -->
                 <?php include("components/tüm hareketler.php") ?>  
                 <!-- Category End -->
 
-                <!-- Recent Post Start -->
-                <!-- <div class="mb-5">
-                    <h3 class="text-uppercase mb-4">Recent Post</h3>
-                    <div class="bg-dark rounded p-4">
-                        <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0 rounded-start" src="img/blog-1.jpg" style="width: 75px;" alt="">
-                            <a href="" class="d-flex align-items-center bg-light rounded-end h5 text-uppercase p-3 mb-0">Sed amet tempor amet sit kasd sea lorem
-                            </a>
-                        </div>
-                        <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0 rounded-start" src="img/blog-2.jpg" style="width: 75px;" alt="">
-                            <a href="" class="d-flex align-items-center bg-light rounded-end h5 text-uppercase p-3 mb-0">Sed amet tempor amet sit kasd sea lorem
-                            </a>
-                        </div>
-                        <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0 rounded-start" src="img/blog-3.jpg" style="width: 75px;" alt="">
-                            <a href="" class="d-flex align-items-center bg-light rounded-end h5 text-uppercase p-3 mb-0">Sed amet tempor amet sit kasd sea lorem
-                            </a>
-                        </div>
-                        <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0 rounded-start" src="img/blog-1.jpg" style="width: 75px;" alt="">
-                            <a href="" class="d-flex align-items-center bg-light rounded-end h5 text-uppercase p-3 mb-0">Sed amet tempor amet sit kasd sea lorem
-                            </a>
-                        </div>
-                        <div class="d-flex overflow-hidden">
-                            <img class="img-fluid flex-shrink-0 rounded-start" src="img/blog-2.jpg" style="width: 75px;" alt="">
-                            <a href="" class="d-flex align-items-center bg-light rounded-end h5 text-uppercase p-3 mb-0">Sed amet tempor amet sit kasd sea lorem
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- Recent Post End -->
+                
 
-                <!-- Tags Start -->
-                <!-- <div class="mb-5">
-                    <h3 class="text-uppercase mb-4">Tag Cloud</h3>
-                    <div class="d-flex flex-wrap m-n1">
-                        <a href="" class="btn btn-dark m-1">Design</a>
-                        <a href="" class="btn btn-dark m-1">Development</a>
-                        <a href="" class="btn btn-dark m-1">Marketing</a>
-                        <a href="" class="btn btn-dark m-1">SEO</a>
-                        <a href="" class="btn btn-dark m-1">Writing</a>
-                        <a href="" class="btn btn-dark m-1">Consulting</a>
-                        <a href="" class="btn btn-dark m-1">Design</a>
-                        <a href="" class="btn btn-dark m-1">Development</a>
-                        <a href="" class="btn btn-dark m-1">Marketing</a>
-                        <a href="" class="btn btn-dark m-1">SEO</a>
-                        <a href="" class="btn btn-dark m-1">Writing</a>
-                        <a href="" class="btn btn-dark m-1">Consulting</a>
-                    </div>
-                </div> -->
-                <!-- Tags End -->
+                
 
                 <!-- Plain Text Start -->
                 <?php include("components/motivasyon sözü.php") ?>
@@ -129,7 +72,40 @@ v            <di class="col-12 text-center">
         </div>
     </div>
     <!-- Blog End -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script>
+    $(".hareket-getir").click(function(e) {
 
+        e.preventDefault();
+        var bolge=(this).querySelector("input").value;
+        
+        $.ajax({
+            type: "GET",
+            url: "islemler.php",
+            data: 'bolge='+bolge+'&islem=hareket', 
+            success: function(data)
+            {
+            $('#sonuc').html(data);
+            }
+        });
+        
+    });
+    $(document).ready(function(){
+        $.ajax({
+            type: "GET",
+            url: "islemler.php",
+            data: 'bolge=tum&islem=hareket', 
+            success: function(data)
+            {
+            $('#sonuc').html(data);
+            }
+        });
+        
+    }
+        
+    )
+  
+    </script>                
     <?php
 include('footer.php')
 

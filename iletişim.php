@@ -55,19 +55,19 @@ include('header.php')
         <div class="row g-0">
             <div class="col-lg-6">
                 <div class="bg-dark p-5">
-                    <form>
+                  <form id='iletisim_formu' action="islemler.php">
                         <div class="row g-3">
                             <div class="col-6">
-                                <input type="text" required class="form-control bg-light border-0 px-4" placeholder="İsim-Soyisim" style="height: 55px;">
+                                <input name="ad_soyad" type="text" required class="form-control bg-light border-0 px-4" placeholder="İsim-Soyisim" style="height: 55px;">
                             </div>
                             <div class="col-6">
-                                <input type="email" required class="form-control bg-light border-0 px-4" placeholder="E-posta" style="height: 55px;">
+                                <input name="mail" type="email" required class="form-control bg-light border-0 px-4" placeholder="E-posta" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" required class="form-control bg-light border-0 px-4" placeholder="Konu" style="height: 55px;">
+                                <input name="tel" type="text" required class="form-control bg-light border-0 px-4" placeholder="Tel" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea required class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Mesaj"></textarea>
+                                <textarea name="mesaj" required class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Mesaj"></textarea>
                             </div>
                             <div class="col-6">  
                             <button class="btn btn-primary w-100 py-3" type="submit">Mesajı Gönder</button>
@@ -87,9 +87,66 @@ include('header.php')
             </div>
         </div>
     </div>
-    <!-- Contact End -->
+    <section class="contact_section layout_padding-bottom">
+    <div class="container">
 
+      <div class="">
+        <div class="contact_section-container">
+          <div class="row">
+            <div class="col-md-6 mx-auto">
+              <!-- <div class="contact-form">
+                <form id='iletisim_formu' action="islemler.php">
+				
+                  <div>
+                    <input name='ad_soyad' required type="text" placeholder="Ad-Soyad">
+                  </div>
+                  <div>
+                    <input name='tel' required pattern="[0-9]{11}" placeholder='Telefon Numarası : 05321234567'  type="tel">
+                  </div>
+                  <div>
+                    <input name='mail' required type="email" placeholder="E-posta">
+                  </div>
+                  <div>
+                    <input name='mesaj' required type="text" placeholder="Mesajınız" class="input_message">
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn_on-hover">
+                      GÖNDER
+                    </button>
+                  </div>
+				
+                </form>
+              </div> -->
+			  <div id='sonuc' style='margin: auto;'>  </div> 
+            </div>
+          </div>
+        </div>
+      </div>
 
+    </div>
+  </section>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script>
+  $("#iletisim_formu").submit(function(e) {
+
+    e.preventDefault();
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    
+    $.ajax({
+        type: "GET",
+        url: actionUrl,
+        data: form.serialize() + '&islem=iletisim', 
+        success: function(data)
+        {
+          $('#sonuc').html(data);
+		  $('.contact-form').hide();
+        }
+    });
+    
+});
+</script>
+   
     <?php
 include('footer.php')
 ?>
