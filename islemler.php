@@ -36,7 +36,7 @@ $sql = "insert into iletisim_mesajlari( ad_soyad, tel, mail, mesaj, ip) values (
                         <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
                         
                     </div>
-                    <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
+                    <a class="h5 text-uppercase text-light" href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">'.$hareket['ad'].'</h4></a>
                 </div>
             </div>
             </a>
@@ -62,7 +62,7 @@ $sql = "insert into iletisim_mesajlari( ad_soyad, tel, mail, mesaj, ip) values (
                         <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
                         
                     </div>
-                    <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
+                    <a class="h5 text-uppercase text-light" href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">'.$hareket['ad'].'</h4></a>
                 </div>
             </div>
             </a>

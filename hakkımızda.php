@@ -1,9 +1,18 @@
 <?php
 $currentPage = "Hakkımızda";
-include('header.php')
-
+include('header.php');
+$sql = mysqli_query($conn,'select COUNT(*) as KADIN,(select count(*) from egitmenler where cinsiyet="erkek") as ERKEK from egitmenler where cinsiyet="kadın" ');
+$sonuc = mysqli_fetch_array($sql);
+$sql2 = mysqli_query($conn,'SELECT bolge, COUNT(*) AS bolge_sayisi FROM hareketler GROUP BY bolge');
+$kolon1=[];
+$kolon2=[];
+while($satir = mysqli_fetch_array($sql2))
+{
+    array_push($kolon1,$satir[0]);
+    array_push($kolon2,$satir[1]);
+}
 ?>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Hero Start -->
     <div class="container-fluid bg-primary p-5 bg-hero mb-5">
@@ -55,8 +64,12 @@ include('header.php')
         </div>
     </div>
     <!-- About End -->
-
-
+    <div class="d-flex justify-content-center mt-5">	  
+			<div style='width:400px;height:400px'><canvas id="grafik1"></canvas></div>
+      </div>
+      <div class="d-flex justify-content-center mt-5">	  
+			<div style='width:400px;height:400px'><canvas id="grafik2"></canvas></div>
+      </div>
     <!-- Programe Start -->
     <?php include("components/beyaz_kisim.php") ?> 
     <!-- Programe Start -->
@@ -65,8 +78,75 @@ include('header.php')
     <!-- Facts Start -->
     <?php include("components/artis_kisim.php") ?>      
     <!-- Facts End -->
-    
 
+
+    
+    
+    <script>
+        new Chart(document.getElementById("grafik1"), {
+            type: 'pie',
+            data: {
+            labels: ["Erkek", "Kadın"],
+            datasets: [{
+                label: " Eğitmen Sayısı",
+                backgroundColor: ["#2a9d8f", "#f4a261"],
+                data: [<?php echo $sonuc["ERKEK"] ?>,<?php echo $sonuc["KADIN"] ?>]
+            }]
+            },
+            options: {
+            responsive: true,
+            animation : false,
+            mainAspectRatio: false,
+            plugins: {
+            legend: {
+                position: 'top',
+            }
+            }
+        },
+        });
+    </script>
+    <script>
+        new Chart(document.getElementById("grafik2"), {
+            type: 'pie',
+            data: {
+            labels: [
+                <?php
+                    foreach ($kolon1 as $bolgeAdi) {
+                        echo '"'.$bolgeAdi .'" ,';
+                    }
+                    ?>
+                ],
+            datasets: [{
+                label: " Hareket Sayısı ",
+                //backgroundColor:["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#a8d5e2", "#f9a620","#ffd449","#548c2f","#104911","red","purple"],
+                backgroundColor:[<?php
+                     
+                     foreach ($kolon2 as $hareketAdedi) {
+                        $color = sprintf("#%06X", mt_rand(0, 0xFFFFFF));
+                        echo '"'.$color .'" ,';
+                    }
+                ?>],
+                data: [
+                <?php
+                    foreach ($kolon2 as $hareketAdedi) {
+                        echo $hareketAdedi . ',';
+                    }
+                    ?>
+                ]
+            }]
+            },
+            options: {
+            responsive: true,
+            animation : false,
+            mainAspectRatio: false,
+            plugins: {
+            legend: {
+                position: 'top',
+            }
+            }
+        },
+        });
+    </script>
     <?php
 include('footer.php')
 

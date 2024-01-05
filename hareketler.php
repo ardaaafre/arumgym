@@ -22,33 +22,9 @@ v            <di class="col-12 text-center">
             <!-- Blog list Start -->
             <div class="col-lg-8">
                 <div class="row g-5 " id="sonuc">
-                
-                <?php
-                // while($hareket=mysqli_fetch_array($sorgu_hareketler))
-                // {
-                //     echo '
-                //     <div class="col-md-6">
-                //     <a href="hareket.php?hareket='.hash('sha256',rand(1,1000)).$hareket['id'].hash('sha256',rand(1,1000)).'">
-                //     <div class="blog-item">
-                //         <div class="position-relative overflow-hidden rounded-top">
-                //             <img class="img-fluid" src="img/'.$hareket['resim'].'" alt="">
-                //         </div>
-                //         <div class="bg-dark d-flex align-items-center rounded-bottom p-4">
-                //             <div class="flex-shrink-0 text-center text-secondary border-end border-secondary pe-3 me-3">
-                                
-                //                 <h6 class="text-light text-uppercase mb-0">'.$hareket['bolge'].'</h6>
-                                
-                //             </div>
-                //             <a class="h5 text-uppercase text-light" href="">'.$hareket['ad'].'</h4></a>
-                //         </div>
-                //     </div>
-                //     </a>
-                // </div>
-                // ';
-                // }
-            ?>
                     
                 </div>
+                <a href=""></a>
             </div>
             <!-- Blog list End -->
 
