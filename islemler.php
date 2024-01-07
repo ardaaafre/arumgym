@@ -11,7 +11,7 @@ if ( $islem == 'iletisim'  ) {
 $sql = "insert into iletisim_mesajlari( ad_soyad, tel, mail, mesaj, ip) values ('$ad_soyad', '$tel', '$mail', '$mesaj', '$ip' )";
 
     if (mysqli_query($conn,$sql)) {
-        echo "<center><img src='images/ok.png' width=96><br>Teşekkürler<p>";
+        echo "<center><img src='img/tik.png' width=96><br>Teşekkürler<p>";
         echo "Mesajınız Gönderildi</center>";
     } else{ echo "Beklenmeyen bir hata oluştu.";
             

@@ -64,7 +64,7 @@ include('header.php')
                                 <input name="mail" type="email" required class="form-control bg-light border-0 px-4" placeholder="E-posta" style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input name="tel" type="text" required class="form-control bg-light border-0 px-4" placeholder="Tel" style="height: 55px;">
+                                <input name="tel" type="text" required pattern="[0-9]{11}" class="form-control bg-light border-0 px-4" placeholder="Tel" style="height: 55px;">
                             </div>
                             <div class="col-12">
                                 <textarea name="mesaj" required class="form-control bg-light border-0 px-4 py-3" rows="4" placeholder="Mesaj"></textarea>
