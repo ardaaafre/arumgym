@@ -99,6 +99,7 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
 
 
                             <a href="iletişim.php" class="nav-item nav-link <?php echo ($currentPage == "İletişim") ? 'active' : ''; ?>">İletişim</a>
+                            <a href="rapor.php" class="nav-item nav-link <?php echo ($currentPage == "Rapor") ? 'active' : ''; ?>">Rapor</a>
                         </div>
                         
                     </div>

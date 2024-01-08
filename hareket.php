@@ -11,11 +11,11 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
     <!-- Hero Start -->
     <div class="container-fluid bg-primary p-5 bg-hero mb-5">
         <div class="row py-5">
-            <div class="col-12 text-center">
-                <h1 class="display-2 text-uppercase text-white mb-md-4">Blog Detail</h1>
-                <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Home</a>
-                <a href="" class="btn btn-light py-md-3 px-md-5">Detail</a>
-            </div>
+v            <di class="col-12 text-center">
+                <h1 class="display-2 text-uppercase text-white mb-md-4">hareketler</h1>
+                <a href="index.php" class="btn btn-primary py-md-3 px-md-5 me-3">Anasayfa</a>
+                <a href="yorumlar.php" class="btn btn-light py-md-3 px-md-5">yorumlar</a>
+            </di>
         </div>
     </div>
     <!-- Hero End -->
@@ -44,7 +44,7 @@ $hareket=mysqli_fetch_array($sorgu_hareket);
                 
 
                 <!-- Category Start -->
-                <?php include("components/tüm hareketler.php") ?>  
+                <!-- <?php include("components/tüm hareketler.php") ?>   -->
                 <!-- Category End -->
 
                

@@ -14,9 +14,8 @@ include('header.php')
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase">En İyi Spor Salonu</h5>
-                            <h1 class="display-2 text-white text-uppercase mb-md-4">ArumGYM ile bedenini inşa et</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                            <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                            <h1 class="display-2 text-white text-uppercase mb-md-4">ArumGYM ile vücudunu yeniden inşa et</h1>
+                            <a href="iletişim.php" class="btn btn-primary py-md-3 px-md-5 me-3">Bize Ulaşın</a>
                         </div>
                     </div>
                 </div>
@@ -24,10 +23,8 @@ include('header.php')
                     <img class="w-100" src="img/carousel-2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase">Best Gym Center</h5>
-                            <h1 class="display-2 text-white text-uppercase mb-md-4">Grow Your Strength With Our Trainers</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Join Us</a>
-                            <a href="" class="btn btn-light py-md-3 px-md-5">Contact Us</a>
+                            <h5 class="text-white text-uppercase">en iyi spor salonu</h5>
+                            <h1 class="display-2 text-white text-uppercase mb-md-4">Eğitmenlerimiz ile vücudunu geliştir</h1>
                         </div>
                     </div>
                 </div>
@@ -99,39 +96,7 @@ include('header.php')
     <!-- Facts Start -->
     
     <?php include("components/artis_kisim.php") ?>      
-            <!-- <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-users fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Our Trainers</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-check fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Complete Project</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
-                        <i class="fa fa-mug-hot fs-4 text-white"></i>
-                    </div>
-                    <div class="ps-4">
-                        <h5 class="text-secondary text-uppercase">Happy Clients</h5>
-                        <h1 class="display-5 text-white mb-0" data-toggle="counter-up">12345</h1>
-                    </div>
-                </div>
-            </div> -->
+            
         </div>
     </div>
     <!-- Facts End -->
@@ -149,16 +114,17 @@ include('header.php')
                 while($egitmen=mysqli_fetch_array($sorgu_egtm))
                 {
                     echo '<div class="col-lg-4 col-md-6">
+                    <a href="egitmen.php?egitmen='.hash('sha256',rand(1,1000)).$egitmen['id'].hash('sha256',rand(1,1000)).'">
                     <div class="team-item position-relative">
                         <div class="position-relative overflow-hidden rounded">
                             <img class="img-fluid w-100" src="img/'.$egitmen['resim'].'" alt="">
                             
                         </div>
                         <div class="position-absolute start-0 bottom-0 w-100 rounded-bottom text-center p-4" style="background: rgba(34, 36, 41, .9);">
-                            <h5 class="text-uppercase text-light">'.$egitmen['adi'].' '.$egitmen['soyadi'].'</h5>
+                            <a href="egitmen.php?egitmen='.hash('sha256',rand(1,1000)).$egitmen['id'].hash('sha256',rand(1,1000)).'"><h5 class="text-uppercase text-light">'.$egitmen['adi'].' '.$egitmen['soyadi'].'</h5></a>
                             <p class="text-uppercase text-secondary m-0">Trainer</p>
                         </div>
-                    </div>
+                    </div></a>
                 </div>';
                 }
             ?>
