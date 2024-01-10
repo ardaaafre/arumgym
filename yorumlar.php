@@ -11,7 +11,8 @@ $sorgu_yrm = mysqli_query($conn,"select * from yorumlar");
             <div class="col-12 text-center">
                 <h1 class="display-2 text-uppercase text-white mb-md-4">Yorumlar</h1>
                 <a href="index.php" class="btn btn-primary py-md-3 px-md-5 me-3">Anasayfa</a>
-                <a href="hareketler.php" class="btn btn-light py-md-3 px-md-5">hareketler</a>
+                <a href="hareketler.php" class="btn btn-primary py-md-3 px-md-5 me-3">hareketler</a>
+                <a href="rapor.php" class="btn btn-primary py-md-3 px-md-5 me-3">rapor</a>
             </div>
         </div>
     </div>

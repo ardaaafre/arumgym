@@ -58,21 +58,14 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                     </div>
                     <div class="col-lg-5 px-5 text-end">
                         <div class="d-inline-flex align-items-center py-2">
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.linkedin.com/in/ardau354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle me-2" href="">
+                            <a class="btn btn-primary btn-square rounded-circle me-2" href="https://www.instagram.com/ardaaafre?igsh=bzlweHY4em1mZGR0">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a class="btn btn-light btn-square rounded-circle" href="">
-                                <i class="fab fa-youtube"></i>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -94,12 +87,13 @@ $genel_bilgiler = mysqli_fetch_array($sorgu_gnl);
                                 <div class="dropdown-menu rounded-0 m-0">
         <a href="hareketler.php" class="dropdown-item ">Hareketler</a>
         <a href="yorumlar.php" class="dropdown-item ">Yorumlar</a>
+        <a href="rapor.php" class="dropdown-item ">Rapor</a>
     </div>
 </div>
 
 
                             <a href="iletişim.php" class="nav-item nav-link <?php echo ($currentPage == "İletişim") ? 'active' : ''; ?>">İletişim</a>
-                            <a href="rapor.php" class="nav-item nav-link <?php echo ($currentPage == "Rapor") ? 'active' : ''; ?>">Rapor</a>
+                            
                         </div>
                         
                     </div>

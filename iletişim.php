@@ -51,10 +51,10 @@ include('header.php')
                 </div>
             </div>
         </div>
-        <div class="row g-0">
+        <div class="row g-0 gizle">
             <div class="col-lg-6">
                 <div class="bg-dark p-5">
-                  <form id='iletisim_formu' action="islemler.php">
+                  <form id='iletisim_formu' action="islemler.php" >
                         <div class="row g-3">
                             <div class="col-6">
                                 <input name="ad_soyad" type="text" required class="form-control bg-light border-0 px-4" placeholder="İsim-Soyisim" style="height: 55px;">
@@ -87,35 +87,13 @@ include('header.php')
         </div>
     </div>
     <section class="contact_section layout_padding-bottom">
-    <div class="container">
+    <div class="container ">
 
       <div class="">
         <div class="contact_section-container">
           <div class="row">
             <div class="col-md-6 mx-auto">
-              <!-- <div class="contact-form">
-                <form id='iletisim_formu' action="islemler.php">
-				
-                  <div>
-                    <input name='ad_soyad' required type="text" placeholder="Ad-Soyad">
-                  </div>
-                  <div>
-                    <input name='tel' required pattern="[0-9]{11}" placeholder='Telefon Numarası : 05321234567'  type="tel">
-                  </div>
-                  <div>
-                    <input name='mail' required type="email" placeholder="E-posta">
-                  </div>
-                  <div>
-                    <input name='mesaj' required type="text" placeholder="Mesajınız" class="input_message">
-                  </div>
-                  <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn_on-hover">
-                      GÖNDER
-                    </button>
-                  </div>
-				
-                </form>
-              </div> -->
+              
 			  <div id='sonuc' style='margin: auto;'>  </div> 
             </div>
           </div>
@@ -139,7 +117,8 @@ include('header.php')
         success: function(data)
         {
           $('#sonuc').html(data);
-		  $('.contact-form').hide();
+		  $('.contact-form').hide(); 
+      $('.gizle').hide();
         }
     });
     
