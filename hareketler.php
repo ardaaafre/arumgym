@@ -31,10 +31,10 @@ v            <di class="col-12 text-center">
 
             <!-- Sidebar Start -->
             <div class="col-lg-4">
-              
-
+        
                 <!-- Category Start -->
-                <?php include("components/tüm hareketler.php") ?>  
+                <?php include("components/tumhareketler.php") ?>  
+               
                 <!-- Category End -->
 
                 
@@ -42,7 +42,7 @@ v            <di class="col-12 text-center">
                 
 
                 <!-- Plain Text Start -->
-                <?php include("components/motivasyon sözü.php") ?>  
+                <?php include("components/motivasyonsozu.php") ?>  
                 <!-- Plain Text End -->
             </div>
             <!-- Sidebar End -->

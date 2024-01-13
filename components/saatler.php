@@ -17,10 +17,10 @@ $sorgu_siniflar = mysqli_query($conn,"SELECT s.id,s.egitmen_id,s.gun_id,s.sinif_
 
                     while($gunler=mysqli_fetch_array($sorgu_gnl))
                     {
-                        echo '<li class="nav-item">
+                        echo '<li class="nav-item day">
                                 <a class="nav-link rounded-pill text-white " data-bs-toggle="pill" href="#tab-'.$gunler[0].'">'.$gunler[1].'</a>
                             </li>';
-                    }
+                        }
                     
                 ?>
             </ul>
@@ -58,4 +58,20 @@ $sorgu_siniflar = mysqli_query($conn,"SELECT s.id,s.egitmen_id,s.gun_id,s.sinif_
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            let day=new Date().getDay();
+            console.log(day);
+            document.querySelector(".day>a").click();
+            if(day==0)
+            {
+                document.querySelectorAll(".day")[6].querySelector("a").click();
+            }
+            else{
+                document.querySelectorAll(".day")[day-1].querySelector("a").click();
+            }
+    })
+
+        
+    </script>
     <!-- Class Timetable Start -->

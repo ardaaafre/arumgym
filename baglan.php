@@ -1,6 +1,6 @@
 <?php
-//$conn = mysqli_connect("localhost","root","","arumgym");
-$conn = mysqli_connect("localhost","121620211111","x4XVFQeNrNT","db_121620211111");
+$conn = mysqli_connect("localhost","root","","arumgym");
+//$conn = mysqli_connect("localhost","121620211111","x4XVFQeNrNT","db_121620211111");
  /* Bağlantı Kontrolü */
  if ( mysqli_connect_errno() ) {
 	 echo "Bağlantı Başarısız. Hata :".mysqli_connect_error();

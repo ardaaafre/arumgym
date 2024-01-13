@@ -44,13 +44,13 @@ v            <di class="col-12 text-center">
                 
 
                 <!-- Category Start -->
-                <!-- <?php include("components/tüm hareketler.php") ?>   -->
+                <!-- <?php include("components/tumhareketler.php") ?>   -->
                 <!-- Category End -->
 
                
 
                 <!-- Plain Text Start -->
-                <?php include("components/motivasyon sözü.php") ?> 
+                <?php include("components/motivasyonsozu.php") ?> 
                 <!-- Plain Text End -->
             </div>
             <!-- Sidebar End -->
